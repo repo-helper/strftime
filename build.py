@@ -3,7 +3,7 @@
 import datetime
 import os
 import sys
-import urllib.request, urllib.error, urllib.parse
+import urllib.request
 
 from bs4 import BeautifulSoup
 import pystache
@@ -54,7 +54,7 @@ def main():
     context = {
         'example_date': str(example_date),
         'directives': directives,
-        'timestamp': datetime.datetime.utcnow().strftime('%c'),
+        'timestamp': datetime.datetime.now(tz=datetime.timezone.utc).strftime('%c'),
     }
     print(pystache.render(template, context))
     return 0
