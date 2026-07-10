@@ -10,5 +10,5 @@ pystache==0.6.0
     # via -r requirements.in
 pytz==2023.3
     # via -r requirements.in
-soupsieve==2.4.1
+soupsieve==2.8.4
     # via beautifulsoup4
